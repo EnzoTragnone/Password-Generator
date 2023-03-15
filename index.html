@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="/assets/style/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Welcome to Password Generator!</h2>
+          <p>Please select all the criteria desired for the password and click the "Generate Password" button to receive your new password.</p>
+        </div>
+        <div class="card-body">
+          <textarea
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <button id="generateBtn" class="btn">Generate Password</button>
+        </div>
+        <div class="criteriaWrap">
+            <form>
+              <div class="criteria" id="LenghtWrap">
+                <label id="lenghtLabel" for="Lenght">How long would you like your password to be? <span id="lengthCounter"></span></label>
+                <input class="input slider" type="range" id="lengthInput" min="8" max="128" value="8">
+              </div>
+              <div class="criteria" id="upperWrap">
+                <label id="upperLabel" for="uppercase">Would you like your password to contain uppercase?</label>
+                <input class="input" type="checkbox" id="upperInput">
+              </div>
+              <div class="criteria" id="lowerWrap">
+                <label id="lowerLabel" for="lower">Would you like your password to contain lowercase?</label>
+                <input class="input" type="checkbox" id="lowerInput">
+              </div>
+              <div class="criteria" id="specialWrap">
+                <label id="specialLabel" for="SpecialCharacter">Would you like your password to contain special characters?</label>
+                <input class="input" type="checkbox" id="specialInput">
+              </div>
+              <div class="criteria" id="numericWrap">
+                <label id="numericLabel" for="SpecialCharacter">Would you like your password to contain numeric values?</label>
+                <input class="input" type="checkbox" id="numericInput">
+              </div>
+              <div class="criteria" id="resetBtnWrap">
+                <button id="resetBtn">Reset</button>
+              </div>
+            </form>
+        </div>
+        <div>
+          <h3>Past Passwords:</h3>
+          <div id="passwordListWrap">
+            <ol id="passwordList">
+              <li class="listItem"></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/assets/js/logic.js"></script>
+  </body>
+</html>
